@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
+using TiledExample.Tiled;
 
-namespace TiledExample.Tiled
+namespace MonoTiled.Tiled.Orthographic
 {
     public class TileLayer
     {

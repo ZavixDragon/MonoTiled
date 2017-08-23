@@ -2,22 +2,22 @@
 using Microsoft.Xna.Framework.Graphics;
 using Color = Microsoft.Xna.Framework.Color;
 
-namespace TiledExample.Tiled
+namespace MonoTiled.Tiled.Orthographic
 {
     public class Tile
     {
-        private readonly Texture2D _texture;
-        private readonly Rectangle _rect;
+        private readonly TileDetail _detail;
+        private readonly Rectangle _destRect;
 
-        public Tile(Texture2D texture, Rectangle rect)
+        public Tile(TileDetail detail, Rectangle destRect)
         {
-            _texture = texture;
-            _rect = rect;
+            _detail = detail;
+            _destRect = destRect;
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_texture, _rect, Color.White);
+            spriteBatch.Draw(_detail.Texture, _destRect, _detail.SourceRect, Color.White);
         } 
     }
 }

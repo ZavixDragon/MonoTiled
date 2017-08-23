@@ -45,12 +45,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tiled\IntegersInText.cs" />
-    <Compile Include="Tiled\Orthographic\BitmapAsTexture2D.cs" />
     <Compile Include="Tiled\Orthographic\Tile.cs" />
+    <Compile Include="Tiled\Orthographic\TileDetail.cs" />
     <Compile Include="Tiled\Orthographic\TileLayer.cs" />
     <Compile Include="Tiled\Orthographic\TileMap.cs" />
     <Compile Include="Tiled\Orthographic\TileMapFactory.cs" />
-    <Compile Include="Tiled\Orthographic\TileMapTextures.cs" />
+    <Compile Include="Tiled\Orthographic\TileMapDetails.cs" />
+    <Compile Include="Tiled\Texture2DFromPath.cs" />
     <Compile Include="Tiled\TmxLoading\Tmx.cs" />
     <Compile Include="Tiled\TmxLoading\TmxLayer.cs" />
     <Compile Include="Tiled\TmxLoading\TmxTile.cs" />
@@ -63,6 +64,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\tmw_desert_spacing.png">

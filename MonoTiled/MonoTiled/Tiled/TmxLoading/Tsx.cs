@@ -1,7 +1,9 @@
-﻿using System.Drawing;
+﻿using System.IO;
 using System.Xml.Linq;
+using Microsoft.Xna.Framework.Graphics;
+using TiledExample.Tiled;
 
-namespace TiledExample.Tiled
+namespace MonoTiled.Tiled.TmxLoading
 {
     public class Tsx
     {
@@ -11,9 +13,9 @@ namespace TiledExample.Tiled
         public int Spacing { get; }
         public int TileCount { get; }
         public int Columns { get; }
-        public Bitmap TileSource { get; }
+        public Texture2D TileSource { get; }
 
-        public Tsx(int firstId, string tsxPath)
+        public Tsx(GraphicsDevice device, int firstId, string tsxPath)
         {
             FirstId = firstId;
             var doc = XDocument.Load($"Content/{tsxPath}");
@@ -23,7 +25,7 @@ namespace TiledExample.Tiled
             Spacing = new XValue(tileset, "spacing").AsInt();
             TileCount = new XValue(tileset, "tilecount").AsInt();
             Columns = new XValue(tileset, "columns").AsInt();
-            TileSource = new Bitmap("Content/" + new XValue(tileset.Element(XName.Get("image")), "source").AsString());
+            TileSource = new Texture2DFromPath(device, Path.Combine("Content", new XValue(tileset.Element(XName.Get("image")), "source").AsString())).Get();
         }
     }
 }

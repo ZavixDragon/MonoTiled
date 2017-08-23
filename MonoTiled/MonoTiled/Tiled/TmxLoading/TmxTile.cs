@@ -1,4 +1,4 @@
-﻿namespace TiledExample.Tiled.TmxLoading
+﻿namespace MonoTiled.Tiled.TmxLoading
 {
     public class TmxTile
     {

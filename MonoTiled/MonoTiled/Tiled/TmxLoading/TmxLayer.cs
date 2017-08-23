@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
-using TiledExample.Tiled.TmxLoading;
+using TiledExample.Tiled;
 
-namespace TiledExample.Tiled
+namespace MonoTiled.Tiled.TmxLoading
 {
     public class TmxLayer
     {
